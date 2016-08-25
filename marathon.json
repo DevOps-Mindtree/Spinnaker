@@ -1,0 +1,32 @@
+{
+    "container": {
+        "docker": {
+            "image": "devopsmt/gs-rest-service:latest" 
+            "network": "BRIDGE",
+            "portMappings": [
+                {
+                    "containerPort": 4000,
+                    "protocol": "tcp"
+                }
+            ]
+        },
+        "type": "DOCKER"
+    },
+    "cpus": 0.5,
+    "healthChecks": [
+        {
+            "gracePeriodSeconds": 600,
+            "intervalSeconds": 30,
+            "maxConsecutiveFailures": 2,
+            "portIndex": 0,
+            "protocol": "TCP",
+            "timeoutSeconds": 10
+        }
+    ],
+    "id": "cd-demo-app",
+    "instances": 1,
+    "mem": 128,
+    "upgradeStrategy": {
+        "minimumHealthCapacity": 0
+    }
+}
