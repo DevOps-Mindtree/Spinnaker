@@ -43,7 +43,7 @@
 	<artifactId>docker-maven-plugin</artifactId>
 	<version>0.2.3</version>
 	<configuration>
-		<imageName>${docker.image.prefix}/gs-rest-service:V1.12</imageName>
+		<imageName>${docker.image.prefix}/gs-rest-service:V1.13</imageName>
 		<dockerDirectory>src/main/docker</dockerDirectory>
 		<resources>
 			<resource>
